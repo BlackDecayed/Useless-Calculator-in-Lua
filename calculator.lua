@@ -1,5 +1,5 @@
 
-function hs()
+function main()
   print("Welcome to Decayed's Calculator!")
   spacingout()
   print("1. Addition")
@@ -23,7 +23,7 @@ function hs()
     print("Invalid Input.")
     os.execute("sleep 1.5")
     os.execute("clear")
-    hs()
+    main()
   end
 end
 
@@ -52,7 +52,7 @@ function add()
     local home = io.read()
     if home == "1" then
         os.execute("clear")
-        hs()
+        main()
     elseif home == "2" then
       os.execute("clear")
       add()
@@ -79,7 +79,7 @@ function sub()
   local home = io.read()
   if home == "1" then
     os.execute("clear")
-    hs()
+    main()
   elseif home == "2" then
     os.execute("clear")
     sub()
@@ -106,7 +106,7 @@ function mul()
   local home = io.read()
   if home == "1" then
     os.execute("clear")
-    hs()
+    main()
   elseif home == "2" then
     os.execute("clear")
     mul()
@@ -137,9 +137,9 @@ function div()
   local home = io.read()
      if home == "1" then
         os.execute("clear")
-        hs() 
+        main()
      elseif home == "2" then
        div()
      end
 end
-hs()
+main()
