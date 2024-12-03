@@ -1,24 +1,33 @@
+
 function hs()
   print("Welcome to Decayed's Calculator!")
   spacingout()
   print("1. Addition")
-  print("2. Substraction")
+  print("2. Subtraction")
   print("3. Multiplication")
   print("4. Division")
   spacingout()
   print()
   print("More functions will be added soon!")
   local input = io.read()
-  if input == "1" then
-    print(add())
-  elseif input == "2" then
-    print(sub())
-  elseif input == "3" then
-    print(mul())
-  elseif input == "4" then
-    print(div())
+  input = string.lower(input)
+  if input == "1" or input == "addition" or input == "add" then
+    add()
+  elseif input == "2" or input == "subtraction" or input == "sub" then
+    sub()
+  elseif input == "3" or input == "multiplication" or input == "mul" then
+    mul()
+  elseif input == "4" or input == "division" or input == "div" then
+    div()
+  else
+    print("Invalid Input.")
+    os.execute("sleep 1.5")
+    os.execute("clear")
+    hs()
   end
 end
+
+
     function spacingout()
   print("——————————————————————————————————————————————")
 end
@@ -114,7 +123,7 @@ function div()
   spacingout()
   io.write("Output: ")
   if xd and yd then
-    if xd or yd ~= 0 then
+    if xd and yd ~= 0 then
       print(xd/yd)
     else
       print("Division by Zero? Lil bro thought they could break the system.")
